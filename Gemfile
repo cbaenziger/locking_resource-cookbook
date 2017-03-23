@@ -1,5 +1,5 @@
 # -*- mode: enh-ruby -*-
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 ruby RUBY_VERSION
 
 gem 'zookeeper'
