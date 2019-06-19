@@ -7,7 +7,7 @@ describe 'locking_resource_test::simple_serialized_lock' do
 
   context 'default configuration' do
     let :chef_run do
-      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '12.04',
+      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '18.04',
                                cookbook_path: cookbook_path,
                                step_into: ['locking_resource']) do |node|
         node.automatic[:fqdn] = 'test_host'
@@ -32,7 +32,7 @@ describe 'locking_resource_test::simple_serialized_lock' do
 
   context 'locking disabled' do
     let :chef_run do
-      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '12.04',
+      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '18.04',
                                cookbook_path: cookbook_path,
                                step_into: ['locking_resource']) do |node|
         node.override[:locking_resource][:skip_restart_coordination] = true
@@ -49,7 +49,7 @@ describe 'locking_resource_test::simple_serialized_lock' do
 
   context 'verify matcher' do
     let :chef_run do
-      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '12.04',
+      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '18.04',
                                cookbook_path: cookbook_path) do |node|
       end
     end
@@ -66,7 +66,7 @@ describe 'locking_resource_test::simple_serialized_process' do
 
   context 'default configuration' do
     let :chef_run do
-      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '12.04',
+      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '18.04',
                                cookbook_path: cookbook_path,
                                step_into: ['locking_resource']) do |node|
         node.automatic['fqdn'] = 'test_host'
@@ -113,7 +113,7 @@ describe 'locking_resource_test::simple_serialized_process' do
 
   context 'verify matcher' do
     let :chef_run do
-      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '12.04',
+      ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '18.04',
                                cookbook_path: cookbook_path) do |node|
       end
     end
